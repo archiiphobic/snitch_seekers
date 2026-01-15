@@ -1,0 +1,193 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-color:#0e1a40; 
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    width: 100vw;
+    background-color: #080e23; 
+    /* position: fixed;
+    top:0px; */
+}
+#title{
+    font-size: 3.4rem;
+    font-weight: bolder;
+    color: #ecb939;
+    font-family: 'Harry Potter', sans-serif;
+    padding: 1vh 0.5vw;
+    -webkit-text-stroke: 0.03rem #634d14;
+    background-color: #080e23;
+}
+#title:hover{
+    text-shadow: 0 0 1.5rem #ffcd4d, 0 0 2rem #ffcd4d;
+    background-color: #080e23;
+
+}
+
+#logo{
+    height: auto;
+    width: 6.5rem;
+    background-color: #080e23;
+    padding: 0px;
+}
+
+
+.house-image{
+    height: 40rem;
+    padding:0px;
+}
+
+.house-name{
+    font-family: 'IFC RAILROAD', sans-serif;
+    font-size: 5rem;
+    color: #fdc331;
+    -webkit-text-stroke: 0.03rem #634d14;
+}
+.house-item{
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    width: 100%;
+
+}
+.houses{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.house-list .house-item .house-link{
+    user-select: none;
+    width: 40rem;
+    display:block;
+    padding: 5rem;
+    border-radius: 4rem;
+}
+
+.house-list .house-link .house-image{
+    width: 30rem;
+    /* object-fit: cover;
+    border-radius: 3rem; */
+}
+
+.house-list .house-item{
+    list-style: none;
+    width: 50rem;
+}
+
+.house-list .house-link .button{
+    height: 3rem;
+    width: 8rem;
+    color:black;
+    font-family:'IFC RAILROAD', sans-serif;
+    font-size: 2rem;
+    background-color: #ecb427;
+    border: 0.2rem solid #604b16;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: 0.4s ease;
+    border-radius: 0.5rem;
+}
+
+.house-list .house-link .button:hover{
+    background-color: #b78f2c;
+}
+
+.house-slogan{
+    font-size:2rem;
+    font-family: 'Snell Roundhand', cursive;
+    text-decoration: transparent;
+}
+
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #080e23;
+}
+
+.nav-bar .nav-item a{
+    text-decoration: none;
+    color: #fdc331;
+    font-family: 'IFC RAILROAD', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #080e23;
+}
+
+.nav-bar .nav-item a:hover{
+    text-shadow: 0 0 1rem #ffcd4d, 0 0 1.5rem #ffcd4d;
+    background-color: #080e23;
+}
+
+.nav-item {
+  position: relative;
+  top: 0;
+  display: inline-block;
+}
+.nav-item img {
+  position: absolute;
+  top: -1rem;     
+  right: -0.5rem;    
+  width: 2.5rem;  
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none; 
+  background-color: transparent;
+  transform: rotate(30deg);
+}
+
+.nav-item:hover img {
+  opacity: 1;
+}
+
+body{
+  cursor: url("cursor.png"), auto;
+}
+
+.rules-image{
+  width: 95vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.house-list{
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0rem);}
+    50%{
+        transform: translateY(-1.5rem);}
+    100%{
+        transform: translateY(0rem);}
+}
+
+
+
+
+
+
+
