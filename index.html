@@ -16,31 +16,48 @@
 </head>
 
 <body>
+    <audio id="bgMusic" loop>
+  <source src="bgtrack.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  document.addEventListener('click', () => music.play());
+</script>
+
+
+
     <header>
         <div class="header-content">
             <img id="logo" src="logo.png">
             <span id="title">Snitch Seekers</span>
             <div class="nav-bar">
-                <div class="nav-item" id="Home"><a href="#">Home</a> <img src="sorting-hat.png" alt="Sorting Hat"></div>
-                <div class="nav-item" id="Houses"><a href="#">Houses</a> <img src="sorting-hat.png" alt="Sorting Hat">
+                <div class="nav-item" id="Home"><a href="#">Home</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+                <div class="nav-item" id="Houses"><a href="#">Houses</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat">
                 </div>
-                <div class="nav-item" id="Rules"><a href="#">Rules</a> <img src="sorting-hat.png" alt="Sorting Hat">
+                <div class="nav-item" id="Rules"><a href="#">Rules</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat">
                 </div>
-                <div class="nav-item" id="Purchase"><a href="#">Purchase</a> <img src="sorting-hat.png"
+                <div class="nav-item" id="Purchase"><a href="#">Purchase</a> <img class="nav-icon" src="sorting-hat.png"
                         alt="Sorting Hat"></div>
                 <div class="nav-item" id="Profile"><a href="#"><img class="profile-icon" src="profile.png"
                             alt="Profile"></a></div> 
             </div>
+        </div>
     </header>
-    <div>
-
+    <div class="content">
+    <div class="spell-title">
+        <div class="wand-wrapper">
+        <img src="wand.png" class="wand-writing" alt="Magic Wand">
+        </div>
+        <h2 class="house-selection">Select Your House</h2>
     </div>
-    <div class="content swiper">
+
+
         <div class="houses">
-            <ul class="house-list swiper-wrapper">
-                <li class="house-item swiper-slide">
+            <ul class="house-list">
+                <li class="house-item gryffindor" style="width: 95vw; margin: 3rem; border-radius: 10%; padding: 0;">
                     <a href="#" class="house-link">
-                        <img src="griffondor.png" class="house-image" alt="Gryffindor Logo">
+                        <img style="height: 38rem; width: auto; padding:0; margin: 0;" src="grsh/griffondor.png" class="house-image" alt="Gryffindor Logo">
                         <h2 class="house-name" style="text-decoration:underline; text-decoration-color: #fdc331;">
                             Gryffindor</h2>
                         <h4 class="house-slogan"
@@ -49,9 +66,9 @@
                         <button class="button">enter</button>
                     </a>
                 </li>
-                <li class="house-item swiper-slide">
+                <li class="house-item hufflepuff" style="width: 95vw; margin: 3rem; border-radius: 10%; padding: 0; align-items: center;">
                     <a href="#" class="house-link">
-                        <img src="hufflepuff.png" class="house-image" alt="Hufflepuff Logo">
+                        <img src="grsh/hufflepuff.png" class="house-image" alt="Hufflepuff Logo">
                         <h2 class="house-name" style="text-decoration:underline; text-decoration-color: #fdc331;">
                             Hufflepuff</h2>
                         <h4 class="house-slogan"
@@ -60,9 +77,9 @@
                         <button class="button">enter</button>
                     </a>
                 </li>
-                <li class="house-item swiper-slide">
+                <li class="house-item ravenclaw" style="width: 95vw; margin: 3rem; border-radius: 10%; padding: 0; align-items: center;">
                     <a href="#" class="house-link">
-                        <img src="ravenclaw.png" class="house-image" alt="Ravenclaw Logo">
+                        <img src="grsh/ravenclaw.png" class="house-image" alt="Ravenclaw Logo">
                         <h2 class="house-name"
                             style="color: rgb(177, 177, 185); text-decoration:underline; text-decoration-color: rgb(214, 215, 210);">
                             Ravenclaw</h2>
@@ -72,9 +89,9 @@
                         <button class="button">enter</button>
                     </a>
                 </li>
-                <li class="house-item swiper-slide">
+                <li class="house-item slytherin" style="width: 95vw; margin: 3rem; border-radius: 10%; padding: 0; align-items: center;">
                     <a href="#" class="house-link">
-                        <img src="slytherin.png" class="house-image" alt="Slytherin Logo">
+                        <img src="grsh/slytherin.png" class="house-image" alt="Slytherin Logo">
                         <h2 class="house-name"
                             style="color: rgb(214, 215, 210); text-decoration:underline; text-decoration-color: rgb(214, 215, 210);">
                             Slytherin</h2>
@@ -85,22 +102,160 @@
                     </a>
                 </li>
             </ul>
-
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-
         </div>
-
     </div>
-    <div class="rules">
-        <img class="rules-image" src="rules.png" alt="Rules Image">
+    <div class="magical-container">
+  <div class="magical-row left">
+    <div class="magical-track">
+      <div class="card"><img class="slider-img" src="sliderimg/E.png" alt="B" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/F.png" alt="C" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/G.png" alt="D" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/H.png" alt="E" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/I.png" alt="F" /></div>
 
+      <div class="card"><img class="slider-img" src="sliderimg/E.png" alt="A" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/F.png" alt="B" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/G.png" alt="C" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/H.png" alt="D" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/I.png" alt="E" /></div>
+    </div>
+  </div>
+
+  <div class="magical-row right">
+    <div class="magical-track">
+      <div class="card"><img class="slider-img" src="sliderimg/A.png" alt="B" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/B.png" alt="C" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/C.png" alt="D" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/D.png" alt="E" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/J.png" alt="F" /></div>
+
+      <div class="card"><img class="slider-img" src="sliderimg/A.png" alt="A" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/B.png" alt="B" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/C.png" alt="C" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/D.png" alt="D" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/J.png" alt="E" /></div>
+    </div>
+  </div>
+
+  <div class="magical-row left">
+    <div class="magical-track">
+      <div class="card"><img class="slider-img" src="sliderimg/E.png" alt="E" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/F.png" alt="B" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/G.png" alt="C" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/H.png" alt="D" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/I.png" alt="E" /></div>
+
+      <div class="card"><img class="slider-img" src="sliderimg/E.png" alt="F" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/F.png" alt="G" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/G.png" alt="H" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/H.png" alt="I" /></div>
+      <div class="card"><img class="slider-img" src="sliderimg/I.png" alt="J" /></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="quiz-section">
+  <h2 class="quiz-title">
+    <span class="line"></span>
+    ✦ ✧ QUIZZES ✧ ✦
+    <span class="line"></span>
+  </h2>
+
+  <div class="quiz-row">
+    <div class="quiz-card">
+      <img src="quiz/quiz1.jpg" class="quiz-img" />
+      <div class="badge">LEADS</div>
+      <div class="quiz-info">
+        <h3>The ultimate Dobby quiz</h3>
+        <p>Level ⭐⭐⭐ | 15 Questions</p>
+      </div>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="script.js"></script> -->
+    <div class="quiz-card">
+      <img src="quiz/quiz2.jpg" class="quiz-img" />
+      <div class="badge">LEADS</div>
+      <div class="quiz-info">
+        <h3>The toe-curlingly embarrassing quiz</h3>
+        <p>Level ⭐⭐ | 10 Questions</p>
+      </div>
+    </div>
+
+    <div class="quiz-card">
+      <img src="quiz/quiz3.jpg" class="quiz-img" />
+      <div class="badge">LEADS</div>
+      <div class="quiz-info">
+        <h3>Whose wand is it anyway?</h3>
+        <p>Level ⭐⭐ | 10 Questions</p>
+      </div>
+    </div>
+  </div>
+
+  <a class="see-all" href="#">SEE ALL QUIZZES →</a>
+</div>
+
+
+    <footer class="wizard-footer">
+  <div class="footer-container">
+
+    <div class="footer-top">
+      <div class="footer-links">
+        <div>
+          <a href="#">Cookie Settings</a>
+          <a href="#">Press</a>
+        </div>
+        <div>
+          <a href="#">FAQs</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Ad Choices</a>
+        </div>
+        <div>
+          <a href="#">Privacy & Cookies</a>
+          <a href="#">Children's Privacy Policy</a>
+          <a href="#">Legals</a>
+        </div>
+        <div>
+          <a href="#">Starting Harry Potter</a>
+        </div>
+      </div>
+
+      <div class="footer-logo">
+        <img src="footerlogo.png" alt="Footer logo">
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <div class="footer-text">
+        <p>© SNITCH SEEKERS 2026</p>
+
+        <p>
+          Looking for Wizarding World? <strong>HarryPotter.com</strong> is the official home of Harry Potter, Fantastic Beasts, and the Wizarding World, formerly known as Pottermore.
+        </p>
+
+        <p>
+          Brought to you by Archita Singh feat a few sleepless nights, delivering the latest news and official products from the Wizarding World and our partners.
+        </p>
+
+        <p>
+          All characters and elements © & TM Warner Bros. Entertainment Inc. Publishing Rights © J.K. Rowling.
+        </p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#"><img src="youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="tiktok.png" alt="TikTok"></a>
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+</div>
 </body>
 
 </html>
