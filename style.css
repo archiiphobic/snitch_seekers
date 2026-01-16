@@ -10,26 +10,10 @@ body{
     align-items: center;
     justify-content: center;
     background: linear-gradient(to top, #0a1539,#0b1434);
-    /* background-color: #0e1a40; */
+    cursor: url("cursor.png"), auto;
 }
 
 
-body{
-  cursor: url("cursor.png"), auto;
-}
-
-
-.header-content{
-    display: flex;
-    flex-direction: row;
-    height: 5rem;
-    width: 100vw;
-    background-color: #080e23; 
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
 
 .content{
     padding: 1rem;
@@ -38,85 +22,6 @@ body{
     align-items: center;
     width: 100%;
 }
-#title{
-    font-size: 3.4rem;
-    font-weight: bolder;
-    color: #ecb939;
-    font-family: 'Harry Potter', sans-serif;
-    padding: 1vh 0.5vw;
-    -webkit-text-stroke: 0.03rem #634d14;
-    background-color: #080e23;
-}
-
-#title:hover{
-    text-shadow: 0 0 1.5rem #ffcd4d, 0 0 2rem #ffcd4d;
-    background-color: #080e23;
-
-}
-
-#logo{
-    height: auto;
-    width: 6.5rem;
-    background-color: #080e23;
-    padding: 0px;
-}
-
-
-.nav-bar{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-left: auto;
-    margin-right: 2rem;
-    align-items: center;
-    justify-content: center;
-    background-color: #080e23;
-}
-
-.nav-bar .nav-item a{
-    text-decoration: none;
-    color: #fdc331;
-    font-family: 'IFC RAILROAD', sans-serif;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #080e23;
-}
-
-.nav-bar .nav-item a:hover{
-    text-shadow: 0 0 1rem #ffcd4d, 0 0 1.5rem #ffcd4d;
-    background-color: #080e23;
-}
-
-
-.nav-item {
-  position: relative;
-  top: 0;
-}
-
-.nav-item .nav-icon {
-  position: absolute;
-  top: -1rem;     
-  right: -0.5rem;    
-  width: 2.5rem;  
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  background-color: transparent;
-  transform: rotate(30deg);
-}
-
-
-.nav-item:hover .nav-icon {
-  opacity: 1;
-}
-
-.profile-icon{
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: #080e23;
-    border: 0.1rem solid #ecb427;
-    padding: 0;
-} 
 
 
 .house-selection {
@@ -480,21 +385,21 @@ body{
   background: #0e1a40;
 }
 
-/* Each row viewport */
+
 .magical-row {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
-/* Track that moves */
+
 .magical-track {
   display: flex;
   width: max-content;
   gap: 2rem;
 }
 
-/* Cards (replace with images if needed) */
+
 .card {
   min-width: 14rem;
   height: 15rem;
@@ -514,7 +419,7 @@ body{
   object-fit: cover;
   border-radius: 1rem;
 }
-/* Animations */
+
 .magical-row.left .magical-track {
   animation: scrollLeft 20s linear infinite;
 }
@@ -596,7 +501,6 @@ body{
 }
 
 .quiz-card::after {
-  /* content: ""; */
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.2));
@@ -650,7 +554,7 @@ body{
   opacity: 0.7;
 }
 
-/* Scroll reveal animation */
+
 @keyframes revealCard {
   to {
     opacity: 1;
@@ -658,6 +562,321 @@ body{
   }
 }
 
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.5rem;
+  background-color: #020824;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.snitch-icon {
+  width: 6rem;
+  height: auto;
+}
+
+.site-title {
+  font-size: 3rem;
+    font-weight: bolder;
+    color: #ecb939;
+    font-family: 'Harry Potter', sans-serif;
+    padding: 0.5vh 0.5vw;
+    -webkit-text-stroke: 0.02rem #634d14;
+    background-color: #080e23;
+}
+
+.site-title:hover{
+    text-shadow: 0 0 1.5rem #ffcd4d, 0 0 2rem #ffcd4d;
+    background-color: #080e23;
+
+}
+
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  font-family: 'IFC RAILROAD', sans-serif;
+  text-decoration: none;
+  color: gold;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.nav-links a:hover{
+    text-shadow: 0 0 1rem #ffcd4d, 0 0 1.5rem #ffcd4d;
+    background-color: #080e23;
+}
+
+.profile-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 2px solid gold;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 1.8rem;
+  height: 0.25rem;
+  background-color: gold;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.5rem;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 5.5rem);
+    background: linear-gradient(to bottom, #020824, #0b143d);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+  }
+}
+
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(0.6rem) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(-45deg);
+}
+
+.nav-item {
+  position: relative;
+  top: 0;
+}
+
+.nav-item .nav-icon {
+  position: absolute;
+  top: -1rem;     
+  right: -1rem;    
+  width: 2.5rem;  
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background-color: transparent;
+  transform: rotate(30deg);
+} 
+
+
+.nav-item:hover .nav-icon {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .snitch-icon {
+    width: 3.5rem;
+  }
+
+  .house-selection {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 0.08rem #5e480f;
+  }
+
+  .wand-writing {
+    width: 7rem;
+  }
+
+  .house-list .house-link {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .house-list .house-link .house-image {
+    width: 12rem;
+  }
+
+  .house-name {
+    font-size: 2.5rem;
+  }
+
+  .house-slogan {
+    font-size: 1.2rem;
+  }
+
+  .house-list .house-link .button {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .card {
+    min-width: 10rem;
+    height: 11rem;
+  }
+
+  .slider-img {
+    width: 10rem;
+    height: 11rem;
+  }
+
+  .quiz-title {
+    font-size: 2.2rem;
+  }
+
+  .quiz-card {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-logo img {
+    width: 14rem;
+  }
+
+  .footer-socials img {
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-title {
+    font-size: 2.2rem;
+  }
+
+  .snitch-icon {
+    width: 4.5rem;
+  }
+
+  .house-selection {
+    font-size: 3.5rem;
+  }
+
+  .house-list .house-link {
+    width: 85%;
+    padding: 3rem;
+  }
+
+  .house-list .house-link .house-image {
+    width: 18rem;
+  }
+
+  .house-name {
+    font-size: 3.5rem;
+  }
+
+  .house-slogan {
+    font-size: 1.5rem;
+  }
+
+  .quiz-title {
+    font-size: 2.8rem;
+  }
+
+  .quiz-card {
+    width: 18rem;
+    height: 12rem;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, auto);
+    gap: 2.5rem;
+  }
+
+  .footer-logo img {
+    width: 16rem;
+  }
+
+  .footer-socials img {
+    width: 4.5rem;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.content {
+  margin-top: 6rem;
+}
+
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.5rem;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 5.5rem);
+    background: linear-gradient(to bottom, #020824, #0b143d);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+}
 
 
 

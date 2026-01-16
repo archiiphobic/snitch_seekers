@@ -10,6 +10,24 @@
          @import url('https://fonts.cdnfonts.com/css/ifc-rail-road');
     </style>
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("open");
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        navLinks.classList.remove("active");
+      });
+    });
+  });
+</script>
 <body>
     <audio id="bgMusic" loop>
   <source src="bgtrack.mp3" type="audio/mpeg">
@@ -19,23 +37,28 @@
   const music = document.getElementById('bgMusic');
   document.addEventListener('click', () => music.play());
 </script>
-       <header>
-        <div class="header-content">
-            <img id="logo" src="logo.png">
-            <span id="title">Snitch Seekers</span>
-            <div class="nav-bar">
-                <div class="nav-item" id="Home"><a href="index.html">Home</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
-                <div class="nav-item" id="Houses"><a href="houses.html">Houses</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat">
-                </div>
-                <div class="nav-item" id="Rules"><a href="rules.html">Rules</a> <img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat">
-                </div>
-                <div class="nav-item" id="Purchase"><a href="purchase.html">Purchase</a> <img class="nav-icon" src="sorting-hat.png"
-                        alt="Sorting Hat"></div>
-                <div class="nav-item" id="Profile"><a href="profile.html"><img class="profile-icon" src="profile.png"
-                            alt="Profile"></a></div> 
-            </div>
-        </div>
-    </header>
+<header class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" alt="Snitch" class="snitch-icon">
+    <span class="site-title">Snitch Seekers</span>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <div class="nav-item"><a href="index.html">Home</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="houses.html">Houses</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="rules.html">Rules</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="purchase.html">Purchase</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="profile.html">
+    <img src="profile.png" alt="Profile" class="profile-icon">
+    </a></div>
+  </nav>
+</header>
     <div class="content">
         <div class="rules-box">
         <h1>How to Play Quidditch</h1>

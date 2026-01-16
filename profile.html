@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile | Snitch Seekers</title>
+  <link rel="stylesheet" href="profilestyle.css" />
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ifc-rail-road" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/harry-potter');
+        @import url('https://fonts.cdnfonts.com/css/ifc-rail-road');
+    </style>
+</head>
+<body>
+    <audio id="bgMusic" loop>
+  <source src="bgtrack.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  document.addEventListener('click', () => music.play());
+</script>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="logo.png" alt="Snitch" class="snitch-icon">
+    <span class="site-title">Snitch Seekers</span>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav-links" id="navLinks">
+    <div class="nav-item"><a href="index.html">Home</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="houses.html">Houses</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="rules.html">Rules</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="purchase.html">Purchase</a><img class="nav-icon" src="sorting-hat.png" alt="Sorting Hat"></div>
+    <div class="nav-item"><a href="profile.html">
+    <img src="profile.png" alt="Profile" class="profile-icon">
+    </a></div>
+  </nav>
+</header>
+
+<div class="page-container">
+  <div class="sidebar left" id="leftSidebar">
+    <h3 style="font-size: 2rem; font-family: 'Harry Potter', sans-serif;">Quick Links</h3>
+    <a href="index.html">🏠 Home</a>
+    <a href="houses.html">🏰 Choose House</a>
+    <a href="rules.html">📜 Game Rules</a>
+    <a href="purchase.html">🛒 Shop</a>
+    <a href="profile.html">👤 Profile</a>
+  </div>
+
+  <div class="profile-area">
+    <div class="profile-card">
+      <h1 style="font-size: 5rem; font-family: 'IFC RAILROAD', sans-serif;" >Create Your Profile</h1>
+      <p class="subtitle" style="font-size:1.5rem; font-family: cursive">Sign up to begin your magical journey ✨</p>
+
+      <form class="profile-form">
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="First name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name" />
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Profile</button>
+      </form>
+    </div>
+</div>
+
+  <div class="sidebar right" id="rightSidebar">
+    <h3 style="font-size: 2rem; font-family: 'Harry Potter', sans-serif;">Game Hub</h3>
+    <div class="game-card">🎯 Join a Match</div>
+    <div class="game-card">🪄 Practice Arena</div>
+    <div class="game-card">🏆 Leaderboard</div>
+    <div class="game-card">🧪 Potion Inventory</div>
+    <div class="game-card">🛡 Equipment Upgrades</div>
+  </div>
+
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(hogwarts.jpeg);
+  background-size:cover;
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5.5rem;
+  background-color: #020824;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.snitch-icon {
+  width: 6rem;
+  height: auto;
+}
+
+.site-title {
+  font-size: 3rem;
+    font-weight: bolder;
+    color: #ecb939;
+    font-family: 'Harry Potter', sans-serif;
+    padding: 0.5vh 0.5vw;
+    -webkit-text-stroke: 0.02rem #634d14;
+    background-color: #080e23;
+}
+
+.site-title:hover{
+    text-shadow: 0 0 1.5rem #ffcd4d, 0 0 2rem #ffcd4d;
+    background-color: #080e23;
+
+}
+
+
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: auto;
+}
+
+.nav-links a {
+  font-family: 'IFC RAILROAD', sans-serif;
+  text-decoration: none;
+  color: gold;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.nav-links a:hover{
+    text-shadow: 0 0 1rem #ffcd4d, 0 0 1.5rem #ffcd4d;
+    background-color: #080e23;
+}
+
+.profile-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 2px solid gold;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 1.8rem;
+  height: 0.25rem;
+  background-color: gold;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 5.5rem;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 5.5rem);
+    background: linear-gradient(to bottom, #020824, #0b143d);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 2rem;
+  }
+}
+
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(0.6rem) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(-45deg);
+}
+
+.nav-item {
+  position: relative;
+  top: 0;
+}
+
+.nav-item .nav-icon {
+  position: absolute;
+  top: -1rem;     
+  right: -1rem;    
+  width: 2.5rem;  
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background-color: transparent;
+  transform: rotate(30deg);
+} 
+
+
+.nav-item:hover .nav-icon {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+/* ---------------- LAYOUT ---------------- */
+.page-container {
+  display: grid;
+  grid-template-columns: 16rem 1fr 16rem;
+  gap: 2rem;
+  padding: 7rem 2rem 2rem;
+}
+
+/* ---------------- SIDEBARS ---------------- */
+.sidebar {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar h3 {
+  color: #ffd966;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+  color: #ffd966;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.6rem;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 217, 102, 0.15);
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.game-card:hover {
+  background: rgba(255, 217, 102, 0.15);
+  transform: translateY(-3px);
+}
+
+/* ---------------- PROFILE CARD ---------------- */
+.profile-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 550px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.6);
+}
+
+.profile-card h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffd966;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+/* ---------------- FORM ---------------- */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.form-group input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.6rem;
+  padding: 0.7rem 0.9rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: gold;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background: linear-gradient(to right, #ffd966, #ffb703);
+  color: #020824;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 1.5rem rgba(255, 217, 102, 0.5);
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 900px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    background: #020824;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .profile-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .profile-card h1 {
+    font-size: 2.2rem;
+  }
+}
