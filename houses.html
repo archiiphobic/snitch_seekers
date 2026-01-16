@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your House | Snitch Seekers</title>
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link rel="stylesheet" href="hstyle.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/ifc-rail-road');
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bgtrack.mp3" type="audio/mpeg">
+</audio>
+<script>
+  const music = document.getElementById('bgMusic');
+  document.addEventListener('click', () => music.play());
+</script>
+
+<header>
+  <div class="header-content">
+    <img id="logo" src="logo.png">
+    <span id="title">Snitch Seekers</span>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-bar" id="navBar">
+      <div class="nav-item"><a href="index.html">Home</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="houses.html">Houses</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="rules.html">Rules</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="purchase.html">Purchase</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="profile.html"><img class="profile-icon" src="profile.png"></a></div>
+    </div>
+  </div>
+</header>
+
+<main class="houses-page">
+  <h1>Select Your House</h1>
+  <p class="subtitle">Let the Sorting Hat decide where you truly belong.</p>
+
+  <section class="houses-grid">
+
+    <div class="house-card gryffindor">
+      <img  style="width:6rem; height:auto;"src="grsh/griffondor.png" alt="Gryffindor Crest">
+      <h2>Gryffindor</h2>
+      <p>Brave, daring, and chivalrous.</p>
+      <button>Join Gryffindor</button>
+    </div>
+
+    <div class="house-card hufflepuff">
+      <img src="grsh/hufflepuff.png" alt="Hufflepuff Crest">
+      <h2>Hufflepuff</h2>
+      <p>Loyal, patient, and hardworking.</p>
+      <button>Join Hufflepuff</button>
+    </div>
+
+    <div class="house-card ravenclaw">
+      <img src="grsh/ravenclaw.png" alt="Ravenclaw Crest">
+      <h2>Ravenclaw</h2>
+      <p>Wise, creative, and curious.</p>
+      <button>Join Ravenclaw</button>
+    </div>
+
+    <div class="house-card slytherin">
+      <img src="grsh/slytherin.png" alt="Slytherin Crest">
+      <h2>Slytherin</h2>
+      <p>Ambitious, cunning, and resourceful.</p>
+      <button>Join Slytherin</button>
+    </div>
+
+  </section>
+</main>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navBar = document.getElementById("navBar");
+
+  hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>

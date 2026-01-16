@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("bg5.jpeg"); 
+  background-size: cover;
+  background-position: 10% 0;
+  /* background-attachment: fixed; */
+  font-family: "Times New Roman", serif;
+  color: #fff;
+  padding-top: 5rem;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 100vw;
+  background-color: #080e23;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#logo {
+  width: 6.5rem;
+  background-color: #080e23;
+}
+
+#title {
+  font-size: 3.4rem;
+  font-weight: bolder;
+  color: #ecb939;
+  font-family: 'Harry Potter', sans-serif;
+  padding: 1vh 0.5vw;
+  -webkit-text-stroke: 0.03rem #634d14;
+  background-color: #080e23;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  align-items: center;
+  background-color: #080e23;
+}
+
+.nav-bar .nav-item a {
+  text-decoration: none;
+  color: #fdc331;
+  font-family: 'IFC RAILROAD', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #080e23;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .nav-icon {
+  position: absolute;
+  top: -1rem;
+  right: -0.5rem;
+  width: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  transform: rotate(30deg);
+}
+
+.nav-item:hover .nav-icon {
+  opacity: 1;
+}
+
+.profile-icon {
+  height: 2.8rem;
+  border-radius: 50%;
+  border: 0.15rem solid #fdc331;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: #fdc331;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(0.65rem) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-0.65rem) rotate(-45deg);
+}
+
+
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-bar {
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background-color: #080e23;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    transition: right 0.3s ease;
+  }
+
+  .nav-bar.active {
+    right: 0;
+  }
+
+  .nav-bar .nav-item a {
+    font-size: 2rem;
+  }
+}
+
+
+.houses-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.houses-page h1 {
+  font-family: 'Harry Potter', serif;
+  font-size: 8rem;
+  color: #ffd966;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: rgb(51, 24, 24);
+  font-family: cursive;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+
+.houses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+
+.house-card {
+    width: 30rem;
+    margin: 3rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+
+}
+
+.house-card:hover {
+  transform: translateY(-0.6rem) scale(1.02);
+}
+
+
+.house-card img {
+  width: 7.5rem;
+  margin-bottom: 1rem;
+}
+
+.house-card h2 {
+  font-family: 'Harry Potter', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  /* -webkit-text-stroke: 0.001rem #634d14; */
+}
+
+
+.house-card p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+
+.house-card button {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.1rem;
+  font-family: 'IFC RAILROAD', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #080e23;
+}
+
+
+.gryffindor {
+  box-shadow: 0 0 1.5rem rgba(170, 30, 30, 0.4);
+  background-image: url("bg/gryffindorbg.png");
+  background-size: cover;
+  background-position: center;
+      grid-column: 1/2;
+           grid-row: 1/2;
+}
+.gryffindor button {
+  background: linear-gradient(135deg, #ae1e1e, #ffd966);
+}
+.gryffindor h2 {
+    text-shadow: 0 0 2rem rgba(10, 9, 5, 1);
+  color: #ffd966;
+}
+
+.hufflepuff {
+    background-image: url("bg/hufflepuffbg.png");
+      background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 1.5rem rgba(230, 185, 40, 0.4);
+      grid-column: 2/3;
+      grid-row: 1/2;
+}
+.hufflepuff button {
+  background: linear-gradient(135deg, #f0c75e, #3a3a3a);
+}
+.hufflepuff h2 {
+    text-shadow: 0 0 2rem rgba(10, 9, 5, 1);
+  color: #f0c75e;
+}
+
+.ravenclaw {
+    background-image: url("bg/ravenclawbg.png");
+      background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 1.5rem rgba(40, 90, 170, 0.4);
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.ravenclaw button {
+  background: linear-gradient(135deg, #2c5aa0, #b7c7ff);
+}
+.ravenclaw h2 {
+    text-shadow: 0 0 2rem rgb(0, 0, 0);
+  color: #b7c7ff;
+}
+
+.slytherin {
+    background-image: url("bg/slytherinbg.png");
+      background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 0 1.5rem rgba(40, 140, 90, 0.4);
+   grid-column: 2/3;
+  grid-row: 2/3;
+}
+.slytherin button {
+  background: linear-gradient(135deg, #1f6f43, #b6f2d0);
+}
+.slytherin h2 {
+    text-shadow: 0 0 2rem rgba(10, 9, 5, 1);
+  color: #b6f2d0;
+}
+
+
+.house-card button:hover {
+  transform: translateY(-0.15rem) scale(1.05);
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.4);
+}
+
+
+@media (max-width: 768px) {
+  .houses-page h1 {
+    font-size: 3.5rem;
+  }
+}

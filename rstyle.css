@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("rules.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Times New Roman", serif;
+    color: #fff;
+}
+
+
+
+.content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-box {
+    width:97vw;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    
+}
+.sub-box {
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+}
+
+h1 {
+    font-family: 'Harry Potter', serif;
+    font-size: 6rem;
+    color: #ffd966;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-shadow: 0 0 2rem rgba(21, 17, 6, 1);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
+}
+
+.sub-box {
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  margin: 3rem;
+}
+
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #080e23;
+}
+
+.nav-bar .nav-item a{
+    text-decoration: none;
+    color: #fdc331;
+    font-family: 'IFC RAILROAD', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #080e23;
+}
+
+.nav-bar .nav-item a:hover{
+    text-shadow: 0 0 1rem #ffcd4d, 0 0 1.5rem #ffcd4d;
+    background-color: #080e23;
+}
+
+
+.nav-item {
+  position: relative;
+  top: 0;
+}
+
+.nav-item .nav-icon {
+  position: absolute;
+  top: -1rem;     
+  right: -0.5rem;    
+  width: 2.5rem;  
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background-color: transparent;
+  transform: rotate(30deg);
+}
+
+
+.nav-item:hover .nav-icon {
+  opacity: 1;
+}
+
+#title{
+    font-size: 3.4rem;
+    font-weight: bolder;
+    color: #ecb939;
+    font-family: 'Harry Potter', sans-serif;
+    padding: 1vh 0.5vw;
+    -webkit-text-stroke: 0.03rem #634d14;
+    background-color: #080e23;
+}
+
+#title:hover{
+    text-shadow: 0 0 1.5rem #ffcd4d, 0 0 2rem #ffcd4d;
+    background-color: #080e23;
+
+}
+
+#logo{
+    height: auto;
+    width: 6.5rem;
+    background-color: #080e23;
+    padding: 0px;
+}
+.header-content{
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    width: 100vw;
+    background-color: #080e23; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.profile-icon{
+    height: 2.8rem;
+    width: auto;
+    border-radius: 50%;
+    border: 0.15rem solid #fdc331;
+}
+

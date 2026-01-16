@@ -9,7 +9,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to top, #0e1a40,#091339);
+    background: linear-gradient(to top, #0a1539,#0b1434);
     /* background-color: #0e1a40; */
 }
 
@@ -327,10 +327,10 @@ body{
 
     background-image: 
     linear-gradient(
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0.8)
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
     ),
-    url("gryffindorbg.png");
+    url("bg/gryffindorbg.png");
 
     background-size: cover;
     background-position: center;
@@ -342,10 +342,10 @@ body{
 
     background-image: 
     linear-gradient(
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0.8)
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
     ),
-    url("hufflepuffbg.png");
+    url("bg/hufflepuffbg.png");
 
     background-size: cover;
     background-position: center;
@@ -357,10 +357,10 @@ body{
 
     background-image: 
     linear-gradient(
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0.8)
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
     ),
-    url("ravenclawbg.png");
+    url("bg/ravenclawbg.png");
 
     background-size: cover;
     background-position: center;
@@ -372,10 +372,10 @@ body{
 
     background-image: 
     linear-gradient(
-        rgba(0,0,0,0.8),
-        rgba(0,0,0,0.8)
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
     ),
-    url("slytherinbg.png");
+    url("bg/slytherinbg.png");
 
     background-size: cover;
     background-position: center;

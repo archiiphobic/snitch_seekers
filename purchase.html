@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchase | Snitch Seekers</title>
+  <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link rel="stylesheet" href="pstyle.css">
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/ifc-rail-road');
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="bgtrack.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bgMusic');
+  document.addEventListener('click', () => music.play());
+</script>
+
+<header>
+  <div class="header-content">
+    <img id="logo" src="logo.png">
+    <span id="title">Snitch Seekers</span>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="nav-bar" id="navBar">
+      <div class="nav-item"><a href="index.html">Home</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="houses.html">Houses</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="rules.html">Rules</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="purchase.html">Purchase</a><img class="nav-icon" src="sorting-hat.png"></div>
+      <div class="nav-item"><a href="profile.html"><img class="profile-icon" src="profile.png"></a></div>
+    </div>
+  </div>
+</header>
+
+<main class="shop-page">
+  <h1>Magical Supply Shop</h1>
+
+  <section class="shop-grid">
+
+    <div class="shop-card">
+      <img src="sliderimg/A.png" alt="Nimbus 3000">
+      <h2>Nimbus 3000</h2>
+      <p>High-speed broom for elite seekers.</p>
+      <span class="price">🪙 300 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/B.png" alt="Polyjuice Potion">
+      <h2>Polyjuice Potion</h2>
+      <p>Transform into another wizard for a short time.</p>
+      <span class="price">🪙 150 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/C.png" alt="Felix Felicis">
+      <h2>Felix Felicis</h2>
+      <p>Lucky potion that grants temporary good luck.</p>
+      <span class="price">🪙 200 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/D.png" alt="Wiggenweld Potion">
+      <h2>Wiggenweld Potion</h2>
+      <p>Restores health and stamina during matches.</p>
+      <span class="price">🪙 100 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/E.png" alt="pepperup potion">
+      <h2>Pepperup Potion</h2>
+      <p>Boosts recovery from injuries and fatigue.</p>
+      <span class="price">🪙 175 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/F.png" alt="invisibility potion">
+      <h2>Invisibility Potion</h2>
+      <p>Become unseen for a short duration.</p>
+      <span class="price">🪙 200 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/G.png" alt="Seeker Gloves">
+      <h2>Seeker Gloves</h2>
+      <p>Special gloves that enhance grip and control.</p>
+      <span class="price">🪙 75 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/H.png" alt="Enchanted goggles">
+      <h2>Enchanted Goggles</h2>
+      <p>Magical goggles that enhance vision and awareness.</p>
+      <span class="price">🪙 125 Galleons</span>
+      <button>Buy Now</button>
+
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/I.png" alt="Focus Draught">
+      <h2>Focus Draught</h2>
+      <p>Enhances concentration and mental clarity.</p>
+      <span class="price">🪙 175 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+    <div class="shop-card">
+      <img src="sliderimg/J.png" alt="Dragon hide boots">
+      <h2>Dragon Hide Boots</h2>
+      <p>Durable boots made from dragon hide for maximum protection.</p>
+      <span class="price">🪙 200 Galleons</span>
+      <button>Buy Now</button>
+    </div>
+
+  </section>
+</main>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navBar = document.getElementById("navBar");
+
+  hamburger.addEventListener("click", () => {
+    navBar.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
